@@ -1,0 +1,280 @@
+/* Projeler ana container */
+.projeler {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Gradient arka plan */
+    min-height: 100vh;
+    /* Tam ekran yüksekliği */
+    display: grid;
+    /* Grid düzeni */
+    grid-template-columns: 1fr 1fr;
+    /* 2 eşit sütun */
+    gap: 2rem;
+    /* Projeler arası boşluk */
+    padding: 2rem;
+    /* Dış boşluk */
+    position: relative;
+    /* Pozisyon referansı */
+    overflow: hidden;
+    /* Taşan içeriği gizle */
+    width: 100%;
+    /* Tam genişlik */
+}
+
+/* Projelerim başlığı */
+.projeler-baslik {
+    grid-column: 1 / -1;
+    /* Tüm sütunları kapla */
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 3rem;
+    /* Büyük font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    text-align: center;
+    /* Metni ortala */
+    margin-bottom: 2rem;
+    /* Alt boşluk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+    animation: fadeInDown 1s ease-out;
+    /* Yukarıdan aşağı animasyon */
+}
+
+/* Her bir proje kartı */
+.proje-bir,
+.proje-iki,
+.proje-üç,
+.proje-dört,
+.proje-beş,
+.proje-altı {
+    background: rgba(255, 255, 255, 0.1);
+    /* Yarı şeffaf beyaz arka plan */
+    border-radius: 15px;
+    /* Köşe yuvarlaklığı */
+    padding: 2rem;
+    /* İç boşluk */
+    backdrop-filter: blur(10px);
+    /* Bulanık arka plan efekti */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* İnce beyaz çerçeve */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    display: flex;
+    /* Flexbox düzeni */
+    flex-direction: column;
+    /* Dikey sıralama */
+    gap: 1rem;
+    /* İçerik arası boşluk */
+}
+
+/* Proje kartı hover efekti */
+.proje-bir:hover,
+.proje-iki:hover,
+.proje-üç:hover,
+.proje-dört:hover,
+.proje-beş:hover,
+.proje-altı:hover {
+    transform: translateY(-10px);
+    /* Yukarı hareket */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    /* Daha güçlü gölge */
+    background: rgba(255, 255, 255, 0.15);
+    /* Daha belirgin arka plan */
+}
+
+/* Proje başlıkları */
+.proje-bir h1,
+.proje-iki h1,
+.proje-üç h1,
+.proje-dört h1,
+.proje-beş h1,
+.proje-altı h1 {
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1.5rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    text-align: center;
+    /* Metni ortala */
+    margin: 0;
+    /* Dış boşluk yok */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+}
+
+/* Proje resimleri */
+.proje-bir img,
+.proje-iki img,
+.proje-üç img,
+.proje-dört img,
+.proje-beş img,
+.proje-altı img {
+    width: 100%;
+    /* Tam genişlik */
+    height: 200px;
+    /* Sabit yükseklik */
+    object-fit: cover;
+    /* Resmi kırp ve sığdır */
+    border-radius: 10px;
+    /* Köşe yuvarlaklığı */
+    transition: transform 0.3s ease;
+    /* Geçiş animasyonu */
+}
+
+/* Proje resmi hover efekti */
+.proje-bir img:hover,
+.proje-iki img:hover,
+.proje-üç img:hover,
+.proje-dört img:hover,
+.proje-beş img:hover,
+.proje-altı img:hover {
+    transform: scale(1.05);
+    /* Hover'da büyütme */
+}
+
+/* Proje açıklamaları */
+.proje-bir p,
+.proje-iki p,
+.proje-üç p,
+.proje-dört p,
+.proje-beş p,
+.proje-altı p {
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1rem;
+    /* Font boyutu */
+    line-height: 1.6;
+    /* Satır yüksekliği */
+    text-align: justify;
+    /* Metni iki yana yasla */
+    margin: 0;
+    /* Dış boşluk yok */
+    opacity: 0.9;
+    /* Hafif şeffaflık */
+}
+
+/* Yukarıdan aşağı fade animasyonu */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(-50px);
+        /* Yukarıdan başla */
+    }
+
+    to {
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
+    }
+}
+
+/* Tablet boyutu için responsive tasarım */
+@media (max-width: 768px) {
+    .projeler {
+        grid-template-columns: 1fr;
+        /* Tek sütun */
+        gap: 1.5rem;
+        /* Daha az boşluk */
+        padding: 1.5rem;
+        /* Daha az padding */
+    }
+
+    .projeler-baslik {
+        font-size: 2.5rem;
+        /* Daha küçük başlık */
+        margin-bottom: 1.5rem;
+        /* Daha az alt boşluk */
+    }
+
+    .proje-bir,
+    .proje-iki,
+    .proje-üç,
+    .proje-dört,
+    .proje-beş,
+    .proje-altı {
+        padding: 1.5rem;
+        /* Daha az iç boşluk */
+    }
+
+    .proje-bir h1,
+    .proje-iki h1,
+    .proje-üç h1,
+    .proje-dört h1,
+    .proje-beş h1,
+    .proje-altı h1 {
+        font-size: 1.3rem;
+        /* Daha küçük başlık */
+    }
+
+    .proje-bir img,
+    .proje-iki img,
+    .proje-üç img,
+    .proje-dört img,
+    .proje-beş img,
+    .proje-altı img {
+        height: 150px;
+        /* Daha küçük resim */
+    }
+}
+
+/* Mobil boyut için responsive tasarım */
+@media (max-width: 480px) {
+    .projeler {
+        gap: 1rem;
+        /* En az boşluk */
+        padding: 1rem;
+        /* En az padding */
+    }
+
+    .projeler-baslik {
+        font-size: 2rem;
+        /* En küçük başlık */
+        margin-bottom: 1rem;
+        /* En az alt boşluk */
+    }
+
+    .proje-bir,
+    .proje-iki,
+    .proje-üç,
+    .proje-dört,
+    .proje-beş,
+    .proje-altı {
+        padding: 1rem;
+        /* En az iç boşluk */
+    }
+
+    .proje-bir h1,
+    .proje-iki h1,
+    .proje-üç h1,
+    .proje-dört h1,
+    .proje-beş h1,
+    .proje-altı h1 {
+        font-size: 1.1rem;
+        /* En küçük başlık */
+    }
+
+    .proje-bir img,
+    .proje-iki img,
+    .proje-üç img,
+    .proje-dört img,
+    .proje-beş img,
+    .proje-altı img {
+        height: 120px;
+        /* En küçük resim */
+    }
+
+    .proje-bir p,
+    .proje-iki p,
+    .proje-üç p,
+    .proje-dört p,
+    .proje-beş p,
+    .proje-altı p {
+        font-size: 0.9rem;
+        /* En küçük paragraf */
+    }
+}

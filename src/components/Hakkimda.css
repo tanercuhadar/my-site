@@ -1,0 +1,26 @@
+.hakkimda {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.hakkimda-başlık {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: -130px;
+}
+
+.hakkimda-paragraf {
+    font-size: 1.5rem;
+    color: #fff;
+}

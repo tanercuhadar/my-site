@@ -1,0 +1,534 @@
+/* CV ana container */
+.cv {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Gradient arka plan */
+    min-height: 100vh;
+    /* Tam ekran yüksekliği */
+    display: flex;
+    /* Flexbox düzeni */
+    flex-direction: column;
+    /* Dikey sıralama */
+    justify-content: flex-start;
+    /* Üstten başla */
+    align-items: center;
+    /* Yatayda ortala */
+    padding: 2rem;
+    /* Dış boşluk */
+    position: relative;
+    /* Pozisyon referansı */
+    overflow: hidden;
+    /* Taşan içeriği gizle */
+    width: 100%;
+    /* Tam genişlik */
+    margin-top: -400px;
+    /* Üstten negatif margin */
+    gap: 2rem;
+    /* Bölümler arası boşluk */
+}
+
+/* CV başlığı */
+.cv-baslik {
+    font-size: 3rem;
+    /* Büyük font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    color: #fff;
+    /* Beyaz renk */
+    text-align: center;
+    /* Metni ortala */
+    margin-bottom: 1rem;
+    /* Alt boşluk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+    animation: fadeInDown 1s ease-out;
+    /* Yukarıdan aşağı animasyon */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+}
+
+/* CV İndirme Bölümü */
+.cv-download-section {
+    margin-bottom: 2rem;
+    /* Alt boşluk */
+    animation: fadeInUp 1s ease-out 0.2s both;
+    /* Aşağıdan yukarı animasyon */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+}
+
+/* CV İndirme Butonu */
+.cv-download-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    /* Gradient arka plan */
+    color: #fff;
+    /* Beyaz renk */
+    border: none;
+    /* Kenarlık yok */
+    padding: 1rem 2rem;
+    /* İç boşluk */
+    border-radius: 50px;
+    /* Yuvarlak köşeler */
+    font-size: 1.2rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    cursor: pointer;
+    /* El işaretçisi */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+    /* Gölge efekti */
+    display: flex;
+    /* Flexbox düzeni */
+    align-items: center;
+    /* Dikeyde ortala */
+    gap: 0.5rem;
+    /* İkon ve metin arası boşluk */
+}
+
+/* CV İndirme Butonu Hover */
+.cv-download-btn:hover {
+    transform: translateY(-3px);
+    /* Yukarı hareket */
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+    /* Daha güçlü gölge */
+    background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+    /* Ters gradient */
+}
+
+/* Buton İkonu */
+.btn-icon {
+    font-size: 1.5rem;
+    /* İkon boyutu */
+}
+
+/* Buton Metni */
+.btn-text {
+    font-weight: 600;
+    /* Orta kalınlık */
+}
+
+/* Yetkinlikler Bölümü */
+.yetkinlikler {
+    background: rgba(255, 255, 255, 0.1);
+    /* Yarı şeffaf beyaz arka plan */
+    border-radius: 20px;
+    /* Köşe yuvarlaklığı */
+    padding: 2.5rem;
+    /* İç boşluk */
+    backdrop-filter: blur(15px);
+    /* Bulanık arka plan efekti */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* İnce beyaz çerçeve */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+    max-width: 1000px;
+    /* Maksimum genişlik */
+    width: 100%;
+    /* Tam genişlik */
+    animation: fadeInUp 1s ease-out 0.4s both;
+    /* Aşağıdan yukarı animasyon */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+}
+
+/* Yetkinlikler Hover */
+.yetkinlikler:hover {
+    transform: translateY(-5px);
+    /* Yukarı hareket */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Daha güçlü gölge */
+    background: rgba(255, 255, 255, 0.15);
+    /* Daha belirgin arka plan */
+}
+
+/* Yetkinlik Başlığı */
+.yetkinlik-baslik {
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 2.5rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    text-align: center;
+    /* Metni ortala */
+    margin-bottom: 2rem;
+    /* Alt boşluk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+}
+
+/* Yetkinlik Grid */
+.yetkinlik-grid {
+    display: grid;
+    /* Grid düzeni */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 1.5rem;
+    /* Kartlar arası boşluk */
+}
+
+/* Yetkinlik Kartı */
+.yetkinlik-kart {
+    background: rgba(255, 255, 255, 0.05);
+    /* Çok hafif şeffaf arka plan */
+    border-radius: 15px;
+    /* Köşe yuvarlaklığı */
+    padding: 1.5rem;
+    /* İç boşluk */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* İnce çerçeve */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+}
+
+/* Yetkinlik Kartı Hover */
+.yetkinlik-kart:hover {
+    background: rgba(255, 255, 255, 0.1);
+    /* Daha belirgin arka plan */
+    transform: translateY(-3px);
+    /* Yukarı hareket */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+}
+
+/* Yetkinlik Kart Başlığı */
+.yetkinlik-kart h3 {
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1.3rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    margin-bottom: 1rem;
+    /* Alt boşluk */
+    text-align: center;
+    /* Metni ortala */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+}
+
+/* Yetkinlik Listesi */
+.yetkinlik-kart ul {
+    list-style: none;
+    /* Liste noktaları yok */
+    padding: 0;
+    /* İç boşluk yok */
+    margin: 0;
+    /* Dış boşluk yok */
+}
+
+/* Yetkinlik Liste Öğesi */
+.yetkinlik-kart li {
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1rem;
+    /* Font boyutu */
+    padding: 0.5rem 0;
+    /* Üst-alt boşluk */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Alt çizgi */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    position: relative;
+    /* Pozisyon referansı */
+    padding-left: 1.5rem;
+    /* Sol boşluk */
+}
+
+/* Yetkinlik Liste Öğesi Hover */
+.yetkinlik-kart li:hover {
+    background: rgba(255, 255, 255, 0.05);
+    /* Hafif arka plan */
+    padding-left: 2rem;
+    /* Sol boşluk artışı */
+}
+
+/* Yetkinlik Liste Öğesi İkon */
+.yetkinlik-kart li::before {
+    content: '▸';
+    /* Ok işareti */
+    position: absolute;
+    /* Mutlak pozisyon */
+    left: 0;
+    /* Sol tarafta */
+    color: #ff6b6b;
+    /* Kırmızı renk */
+    font-weight: bold;
+    /* Kalın font */
+}
+
+/* Staj Bölümü */
+.staj {
+    background: rgba(255, 255, 255, 0.1);
+    /* Yarı şeffaf beyaz arka plan */
+    border-radius: 20px;
+    /* Köşe yuvarlaklığı */
+    padding: 3rem;
+    /* İç boşluk */
+    backdrop-filter: blur(15px);
+    /* Bulanık arka plan efekti */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* İnce beyaz çerçeve */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+    max-width: 800px;
+    /* Maksimum genişlik */
+    width: 100%;
+    /* Tam genişlik */
+    animation: fadeInUp 1s ease-out 0.6s both;
+    /* Aşağıdan yukarı animasyon (gecikmeli) */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+}
+
+/* Staj Hover */
+.staj:hover {
+    transform: translateY(-5px);
+    /* Yukarı hareket */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Daha güçlü gölge */
+    background: rgba(255, 255, 255, 0.15);
+    /* Daha belirgin arka plan */
+}
+
+/* Staj Başlığı */
+.staj-baslik {
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 2rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    text-align: center;
+    /* Metni ortala */
+    margin-bottom: 1.5rem;
+    /* Alt boşluk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+}
+
+/* Staj paragrafı */
+.staj-paragraf {
+    font-size: 1.2rem;
+    /* Font boyutu */
+    color: #fff;
+    /* Beyaz renk */
+    line-height: 1.8;
+    /* Satır yüksekliği */
+    text-align: justify;
+    /* Metni iki yana yasla */
+    margin: 0;
+    /* Dış boşluk yok */
+    opacity: 0.95;
+    /* Hafif şeffaflık */
+    font-weight: 400;
+    /* Normal font kalınlığı */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Hafif gölge */
+}
+
+/* Arka plan dekoratif elementler */
+.cv::before {
+    content: '';
+    /* İçerik yok */
+    position: absolute;
+    /* Mutlak pozisyon */
+    top: -50%;
+    /* Üstten yarı yükseklik */
+    left: -50%;
+    /* Soldan yarı genişlik */
+    width: 200%;
+    /* İki kat genişlik */
+    height: 200%;
+    /* İki kat yükseklik */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    /* Radyal gradient */
+    animation: rotate 25s linear infinite;
+    /* Döndürme animasyonu */
+    z-index: 1;
+    /* Arka plan katmanı */
+}
+
+/* Yukarıdan aşağı fade animasyonu */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(-50px);
+        /* Yukarıdan başla */
+    }
+
+    to {
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
+    }
+}
+
+/* Aşağıdan yukarı fade animasyonu */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(50px);
+        /* Aşağıdan başla */
+    }
+
+    to {
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
+    }
+}
+
+/* Arka plan döndürme animasyonu */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        /* Başlangıç açısı */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Tam dönüş */
+    }
+}
+
+/* Tablet boyutu için responsive tasarım */
+@media (max-width: 768px) {
+    .cv {
+        padding: 1.5rem;
+        /* Daha az padding */
+        gap: 1.5rem;
+        /* Daha az boşluk */
+    }
+
+    .cv-baslik {
+        font-size: 2.5rem;
+        /* Daha küçük başlık */
+        margin-bottom: 1rem;
+        /* Daha az alt boşluk */
+    }
+
+    .cv-download-btn {
+        padding: 0.8rem 1.5rem;
+        /* Daha az padding */
+        font-size: 1rem;
+        /* Daha küçük font */
+    }
+
+    .yetkinlikler {
+        padding: 2rem;
+        /* Daha az iç boşluk */
+        max-width: 600px;
+        /* Daha az maksimum genişlik */
+    }
+
+    .yetkinlik-baslik {
+        font-size: 2rem;
+        /* Daha küçük başlık */
+    }
+
+    .yetkinlik-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Daha küçük kartlar */
+        gap: 1rem;
+        /* Daha az boşluk */
+    }
+
+    .staj {
+        padding: 2rem;
+        /* Daha az iç boşluk */
+        max-width: 600px;
+        /* Daha az maksimum genişlik */
+    }
+
+    .staj-baslik {
+        font-size: 1.8rem;
+        /* Daha küçük başlık */
+    }
+
+    .staj-paragraf {
+        font-size: 1.1rem;
+        /* Daha küçük paragraf */
+        line-height: 1.6;
+        /* Daha az satır yüksekliği */
+    }
+}
+
+/* Mobil boyut için responsive tasarım */
+@media (max-width: 480px) {
+    .cv {
+        padding: 1rem;
+        /* En az padding */
+        gap: 1rem;
+        /* En az boşluk */
+    }
+
+    .cv-baslik {
+        font-size: 2rem;
+        /* En küçük başlık */
+        margin-bottom: 0.5rem;
+        /* En az alt boşluk */
+    }
+
+    .cv-download-btn {
+        padding: 0.6rem 1.2rem;
+        /* En az padding */
+        font-size: 0.9rem;
+        /* En küçük font */
+    }
+
+    .yetkinlikler {
+        padding: 1.5rem;
+        /* En az iç boşluk */
+        max-width: 400px;
+        /* En az maksimum genişlik */
+    }
+
+    .yetkinlik-baslik {
+        font-size: 1.8rem;
+        /* En küçük başlık */
+    }
+
+    .yetkinlik-grid {
+        grid-template-columns: 1fr;
+        /* Tek sütun */
+        gap: 1rem;
+        /* En az boşluk */
+    }
+
+    .staj {
+        padding: 1.5rem;
+        /* En az iç boşluk */
+        max-width: 400px;
+        /* En az maksimum genişlik */
+    }
+
+    .staj-baslik {
+        font-size: 1.5rem;
+        /* En küçük başlık */
+    }
+
+    .staj-paragraf {
+        font-size: 1rem;
+        /* En küçük paragraf */
+        line-height: 1.5;
+        /* En az satır yüksekliği */
+    }
+}

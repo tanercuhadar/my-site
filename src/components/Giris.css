@@ -1,0 +1,253 @@
+/* Giriş bölümü ana container */
+.giriş {
+    min-height: 100vh;
+    /* Tam ekran yüksekliği */
+    display: flex;
+    /* Flexbox düzeni */
+    flex-direction: column;
+    /* Dikey sıralama */
+    justify-content: center;
+    /* Dikeyde ortala */
+    align-items: center;
+    /* Yatayda ortala */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Gradient arka plan */
+    padding: 2rem;
+    /* İç boşluk */
+    position: relative;
+    /* Pozisyon referansı */
+    overflow: hidden;
+    /* Taşan içeriği gizle */
+    width: 100%;
+}
+
+/* Giriş bölümü başlık stilleri */
+.giriş h1 {
+    font-size: 3.5rem;
+    /* Büyük font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    color: #fff;
+    /* Beyaz renk */
+    text-align: center;
+    /* Metni ortala */
+    margin-bottom: 2rem;
+    /* Alt boşluk */
+    line-height: 1.2;
+    /* Satır yüksekliği */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+    animation: fadeInDown 1s ease-out;
+    /* Yukarıdan aşağı animasyon */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+}
+
+/* Giriş bölümü paragraf stilleri */
+.giriş p {
+    font-size: 1.3rem;
+    /* Orta font boyutu */
+    color: #fff;
+    /* Beyaz renk */
+    text-align: center;
+    /* Metni ortala */
+    max-width: 600px;
+    /* Maksimum genişlik */
+    margin-bottom: 3rem;
+    /* Alt boşluk */
+    line-height: 1.6;
+    /* Satır yüksekliği */
+    opacity: 0.9;
+    /* Hafif şeffaflık */
+    animation: fadeInUp 1s ease-out 0.3s both;
+    /* Aşağıdan yukarı animasyon (gecikmeli) */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+}
+
+/* Giriş bölümü fotoğraf container */
+.giriş-fotoğraf {
+    width: 200px;
+    /* Sabit genişlik */
+    height: 200px;
+    /* Sabit yükseklik */
+    border-radius: 50%;
+    /* Yuvarlak şekil */
+    overflow: hidden;
+    /* Taşan kısmı gizle */
+    border: 4px solid #fff;
+    /* Beyaz çerçeve */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+    animation: fadeInUp 1s ease-out 0.6s both;
+    /* Aşağıdan yukarı animasyon (gecikmeli) */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+    transition: transform 0.3s ease;
+    /* Hover animasyonu */
+}
+
+/* Giriş bölümü fotoğraf hover efekti */
+.giriş-fotoğraf:hover {
+    transform: scale(1.05);
+    /* Hover'da büyütme */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    /* Hover'da daha güçlü gölge */
+}
+
+/* Giriş bölümü fotoğraf img */
+.giriş-fotoğraf img {
+    width: 100%;
+    /* Tam genişlik */
+    height: 100%;
+    /* Tam yükseklik */
+    object-fit: cover;
+    /* Resmi kırp ve sığdır */
+    transition: transform 0.3s ease;
+    /* Geçiş animasyonu */
+}
+
+/* Giriş bölümü fotoğraf img hover efekti */
+.giriş-fotoğraf:hover img {
+    transform: scale(1.1);
+    /* Hover'da resmi büyüt */
+}
+
+/* Arka plan dekoratif elementler */
+.giriş::before {
+    content: '';
+    /* İçerik yok */
+    position: absolute;
+    /* Mutlak pozisyon */
+    top: -50%;
+    /* Üstten yarı yükseklik */
+    left: -50%;
+    /* Soldan yarı genişlik */
+    width: 200%;
+    /* İki kat genişlik */
+    height: 200%;
+    /* İki kat yükseklik */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    /* Radyal gradient */
+    animation: rotate 20s linear infinite;
+    /* Döndürme animasyonu */
+    z-index: 1;
+    /* Arka plan katmanı */
+}
+
+/* Yukarıdan aşağı fade animasyonu */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(-50px);
+        /* Yukarıdan başla */
+    }
+
+    to {
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
+    }
+}
+
+/* Aşağıdan yukarı fade animasyonu */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(50px);
+        /* Aşağıdan başla */
+    }
+
+    to {
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
+    }
+}
+
+/* Arka plan döndürme animasyonu */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        /* Başlangıç açısı */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Tam dönüş */
+    }
+}
+
+/* Tablet boyutu için responsive tasarım */
+@media (max-width: 768px) {
+    .giriş {
+        padding: 1.5rem;
+        /* Daha az padding */
+    }
+
+    .giriş h1 {
+        font-size: 2.5rem;
+        /* Daha küçük başlık */
+        margin-bottom: 1.5rem;
+        /* Daha az alt boşluk */
+    }
+
+    .giriş p {
+        font-size: 1.1rem;
+        /* Daha küçük paragraf */
+        max-width: 500px;
+        /* Daha az maksimum genişlik */
+        margin-bottom: 2rem;
+        /* Daha az alt boşluk */
+    }
+
+    .giriş-fotoğraf {
+        width: 150px;
+        /* Daha küçük fotoğraf */
+        height: 150px;
+        /* Daha küçük fotoğraf */
+    }
+}
+
+/* Mobil boyut için responsive tasarım */
+@media (max-width: 480px) {
+    .giriş {
+        padding: 1rem;
+        /* En az padding */
+    }
+
+    .giriş h1 {
+        font-size: 2rem;
+        /* En küçük başlık */
+        margin-bottom: 1rem;
+        /* En az alt boşluk */
+    }
+
+    .giriş p {
+        font-size: 1rem;
+        /* En küçük paragraf */
+        max-width: 400px;
+        /* En az maksimum genişlik */
+        margin-bottom: 1.5rem;
+        /* En az alt boşluk */
+    }
+
+    .giriş-fotoğraf {
+        width: 120px;
+        /* En küçük fotoğraf */
+        height: 120px;
+        /* En küçük fotoğraf */
+        border-width: 3px;
+        /* Daha ince çerçeve */
+    }
+}

@@ -1,0 +1,393 @@
+/* Footer ana container */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    /* Koyu gradient arka plan */
+    color: #fff;
+    /* Beyaz renk */
+    padding: 3rem 0 1rem 0;
+    /* Üst-alt-sağ-sol boşluk */
+    position: relative;
+    /* Pozisyon referansı */
+    overflow: hidden;
+    /* Taşan içeriği gizle */
+}
+
+/* Footer içerik container */
+.footer-content {
+    max-width: 1200px;
+    /* Maksimum genişlik */
+    margin: 0 auto;
+    /* Ortala */
+    padding: 0 2rem;
+    /* Sağ-sol boşluk */
+}
+
+/* Üst footer bölümü */
+.footer-ust {
+    display: grid;
+    /* Grid düzeni */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 2rem;
+    /* Bölümler arası boşluk */
+    margin-bottom: 2rem;
+    /* Alt boşluk */
+    padding-bottom: 2rem;
+    /* Alt iç boşluk */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Alt çizgi */
+}
+
+/* Footer bölümü */
+.footer-bolum {
+    animation: fadeInUp 1s ease-out 0.2s both;
+    /* Aşağıdan yukarı animasyon */
+}
+
+/* Footer bölüm başlığı */
+.footer-bolum h3 {
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1.5rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    margin-bottom: 1rem;
+    /* Alt boşluk */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+    position: relative;
+    /* Pozisyon referansı */
+}
+
+/* Footer bölüm başlığı alt çizgi */
+.footer-bolum h3::after {
+    content: '';
+    /* İçerik yok */
+    position: absolute;
+    /* Mutlak pozisyon */
+    bottom: -5px;
+    /* Alt tarafta */
+    left: 0;
+    /* Sol tarafta */
+    width: 50px;
+    /* Genişlik */
+    height: 2px;
+    /* Yükseklik */
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    /* Gradient çizgi */
+    border-radius: 1px;
+    /* Köşe yuvarlaklığı */
+}
+
+/* Footer bölüm paragrafı */
+.footer-bolum p {
+    color: rgba(255, 255, 255, 0.8);
+    /* Yarı şeffaf beyaz */
+    font-size: 1rem;
+    /* Font boyutu */
+    line-height: 1.6;
+    /* Satır yüksekliği */
+    margin-bottom: 0.5rem;
+    /* Alt boşluk */
+}
+
+/* Footer liste */
+.footer-bolum ul {
+    list-style: none;
+    /* Liste noktaları yok */
+    padding: 0;
+    /* İç boşluk yok */
+    margin: 0;
+    /* Dış boşluk yok */
+}
+
+/* Footer liste öğesi */
+.footer-bolum li {
+    margin-bottom: 0.5rem;
+    /* Alt boşluk */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+}
+
+/* Footer liste linki */
+.footer-bolum a {
+    color: rgba(255, 255, 255, 0.8);
+    /* Yarı şeffaf beyaz */
+    text-decoration: none;
+    /* Alt çizgi yok */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    position: relative;
+    /* Pozisyon referansı */
+    padding-left: 0;
+    /* Sol boşluk */
+}
+
+/* Footer liste linki hover */
+.footer-bolum a:hover {
+    color: #ff6b6b;
+    /* Kırmızı renk */
+    padding-left: 10px;
+    /* Sol boşluk artışı */
+}
+
+/* Footer liste linki hover çizgi */
+.footer-bolum a::before {
+    content: '▸';
+    /* Ok işareti */
+    position: absolute;
+    /* Mutlak pozisyon */
+    left: -15px;
+    /* Sol tarafta */
+    opacity: 0;
+    /* Başlangıçta görünmez */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    color: #ff6b6b;
+    /* Kırmızı renk */
+}
+
+/* Footer liste linki hover ok işareti */
+.footer-bolum a:hover::before {
+    opacity: 1;
+    /* Görünür */
+    left: -10px;
+    /* Sol tarafta */
+}
+
+/* Footer iletişim */
+.footer-iletisim p {
+    margin-bottom: 0.5rem;
+    /* Alt boşluk */
+    display: flex;
+    /* Flexbox düzeni */
+    align-items: center;
+    /* Dikeyde ortala */
+    gap: 0.5rem;
+    /* İkon ve metin arası boşluk */
+}
+
+/* Footer sosyal medya */
+.footer-sosyal {
+    display: flex;
+    /* Flexbox düzeni */
+    gap: 1rem;
+    /* Sosyal medya ikonları arası boşluk */
+    margin-top: 1rem;
+    /* Üst boşluk */
+}
+
+/* Sosyal medya linki */
+.sosyal-link {
+    display: flex;
+    /* Flexbox düzeni */
+    align-items: center;
+    /* Dikeyde ortala */
+    justify-content: center;
+    /* Yatayda ortala */
+    width: 40px;
+    /* Genişlik */
+    height: 40px;
+    /* Yükseklik */
+    background: rgba(255, 255, 255, 0.1);
+    /* Yarı şeffaf arka plan */
+    border-radius: 50%;
+    /* Yuvarlak şekil */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    text-decoration: none;
+    /* Alt çizgi yok */
+}
+
+/* Sosyal medya linki hover */
+.sosyal-link:hover {
+    background: #ff6b6b;
+    /* Kırmızı arka plan */
+    transform: translateY(-3px);
+    /* Yukarı hareket */
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    /* Gölge efekti */
+}
+
+/* Sosyal medya ikonu */
+.sosyal-icon {
+    font-size: 1.2rem;
+    /* İkon boyutu */
+    color: #fff;
+    /* Beyaz renk */
+}
+
+/* Alt footer bölümü */
+.footer-alt {
+    display: flex;
+    /* Flexbox düzeni */
+    justify-content: space-between;
+    /* İki yana yasla */
+    align-items: center;
+    /* Dikeyde ortala */
+    padding-top: 1rem;
+    /* Üst iç boşluk */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Üst çizgi */
+    animation: fadeInUp 1s ease-out 0.4s both;
+    /* Aşağıdan yukarı animasyon */
+}
+
+/* Footer telif hakkı */
+.footer-copyright p {
+    color: rgba(255, 255, 255, 0.6);
+    /* Daha şeffaf beyaz */
+    font-size: 0.9rem;
+    /* Küçük font */
+    margin: 0;
+    /* Dış boşluk yok */
+}
+
+/* Footer made with love */
+.footer-made p {
+    color: rgba(255, 255, 255, 0.6);
+    /* Daha şeffaf beyaz */
+    font-size: 0.9rem;
+    /* Küçük font */
+    margin: 0;
+    /* Dış boşluk yok */
+}
+
+/* Arka plan dekoratif elementler */
+.footer::before {
+    content: '';
+    /* İçerik yok */
+    position: absolute;
+    /* Mutlak pozisyon */
+    top: 0;
+    /* Üst tarafta */
+    left: 0;
+    /* Sol tarafta */
+    width: 100%;
+    /* Tam genişlik */
+    height: 100%;
+    /* Tam yükseklik */
+    background: radial-gradient(circle at 20% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(238, 90, 36, 0.1) 0%, transparent 50%);
+    /* Çoklu radyal gradient */
+    pointer-events: none;
+    /* Tıklanabilir değil */
+}
+
+/* Aşağıdan yukarı fade animasyonu */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(30px);
+        /* Aşağıdan başla */
+    }
+
+    to {
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
+    }
+}
+
+/* Tablet boyutu için responsive tasarım */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0 1rem 0;
+        /* Daha az padding */
+    }
+
+    .footer-content {
+        padding: 0 1.5rem;
+        /* Daha az padding */
+    }
+
+    .footer-ust {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Daha küçük kartlar */
+        gap: 1.5rem;
+        /* Daha az boşluk */
+        margin-bottom: 1.5rem;
+        /* Daha az alt boşluk */
+        padding-bottom: 1.5rem;
+        /* Daha az alt iç boşluk */
+    }
+
+    .footer-bolum h3 {
+        font-size: 1.3rem;
+        /* Daha küçük başlık */
+    }
+
+    .footer-bolum p {
+        font-size: 0.9rem;
+        /* Daha küçük paragraf */
+    }
+
+    .footer-alt {
+        flex-direction: column;
+        /* Dikey sıralama */
+        gap: 1rem;
+        /* Boşluk */
+        text-align: center;
+        /* Metni ortala */
+    }
+}
+
+/* Mobil boyut için responsive tasarım */
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 0 1rem 0;
+        /* En az padding */
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+        /* En az padding */
+    }
+
+    .footer-ust {
+        grid-template-columns: 1fr;
+        /* Tek sütun */
+        gap: 1rem;
+        /* En az boşluk */
+        margin-bottom: 1rem;
+        /* En az alt boşluk */
+        padding-bottom: 1rem;
+        /* En az alt iç boşluk */
+    }
+
+    .footer-bolum h3 {
+        font-size: 1.2rem;
+        /* En küçük başlık */
+    }
+
+    .footer-bolum p {
+        font-size: 0.85rem;
+        /* En küçük paragraf */
+    }
+
+    .footer-sosyal {
+        gap: 0.8rem;
+        /* Daha az boşluk */
+    }
+
+    .sosyal-link {
+        width: 35px;
+        /* Daha küçük genişlik */
+        height: 35px;
+        /* Daha küçük yükseklik */
+    }
+
+    .sosyal-icon {
+        font-size: 1rem;
+        /* Daha küçük ikon */
+    }
+
+    .footer-copyright p,
+    .footer-made p {
+        font-size: 0.8rem;
+        /* En küçük font */
+    }
+}
