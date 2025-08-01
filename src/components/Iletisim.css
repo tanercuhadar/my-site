@@ -1,338 +1,501 @@
 /* İletişim ana container */
 .iletisim {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient arka plan */
-    min-height: 100vh; /* Tam ekran yüksekliği */
-    display: flex; /* Flexbox düzeni */
-    flex-direction: column; /* Dikey sıralama */
-    justify-content: flex-start; /* Üstten başla */
-    align-items: center; /* Yatayda ortala */
-    padding: 2rem; /* Dış boşluk */
-    position: relative; /* Pozisyon referansı */
-    overflow: hidden; /* Taşan içeriği gizle */
-    width: 100%; /* Tam genişlik */
-    gap: 3rem; /* Bölümler arası boşluk */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Gradient arka plan */
+    min-height: 100vh;
+    /* Tam ekran yüksekliği */
+    display: flex;
+    /* Flexbox düzeni */
+    flex-direction: column;
+    /* Dikey sıralama */
+    justify-content: flex-start;
+    /* Üstten başla */
+    align-items: center;
+    /* Yatayda ortala */
+    padding: 2rem;
+    /* Dış boşluk */
+    position: relative;
+    /* Pozisyon referansı */
+    overflow: hidden;
+    /* Taşan içeriği gizle */
+    width: 100%;
+    /* Tam genişlik */
+    gap: 3rem;
+    /* Bölümler arası boşluk */
 }
 
 /* İletişim başlığı */
 .iletisim-baslik {
-    font-size: 3rem; /* Büyük font boyutu */
-    font-weight: bold; /* Kalın font */
-    color: #fff; /* Beyaz renk */
-    text-align: center; /* Metni ortala */
-    margin-bottom: 1rem; /* Alt boşluk */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Gölge efekti */
-    animation: fadeInDown 1s ease-out; /* Yukarıdan aşağı animasyon */
-    z-index: 2; /* Katman sırası */
-    position: relative; /* Pozisyon referansı */
+    font-size: 3rem;
+    /* Büyük font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    color: #fff;
+    /* Beyaz renk */
+    text-align: center;
+    /* Metni ortala */
+    margin-bottom: 1rem;
+    /* Alt boşluk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
+    animation: fadeInDown 1s ease-out;
+    /* Yukarıdan aşağı animasyon */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
 }
 
 /* İletişim bilgileri container */
 .iletisim-bilgiler {
-    display: grid; /* Grid düzeni */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 2rem; /* Kartlar arası boşluk */
-    max-width: 900px; /* Maksimum genişlik */
-    width: 100%; /* Tam genişlik */
-    animation: fadeInUp 1s ease-out 0.2s both; /* Aşağıdan yukarı animasyon */
-    z-index: 2; /* Katman sırası */
-    position: relative; /* Pozisyon referansı */
+    display: grid;
+    /* Grid düzeni */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 2rem;
+    /* Kartlar arası boşluk */
+    max-width: 900px;
+    /* Maksimum genişlik */
+    width: 100%;
+    /* Tam genişlik */
+    animation: fadeInUp 1s ease-out 0.2s both;
+    /* Aşağıdan yukarı animasyon */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
 }
 
 /* İletişim kartı */
 .iletisim-kart {
-    background: rgba(255, 255, 255, 0.1); /* Yarı şeffaf beyaz arka plan */
-    border-radius: 20px; /* Köşe yuvarlaklığı */
-    padding: 2rem; /* İç boşluk */
-    backdrop-filter: blur(15px); /* Bulanık arka plan efekti */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* İnce beyaz çerçeve */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-    text-align: center; /* Metni ortala */
-    transition: all 0.3s ease; /* Geçiş animasyonu */
+    background: rgba(255, 255, 255, 0.1);
+    /* Yarı şeffaf beyaz arka plan */
+    border-radius: 20px;
+    /* Köşe yuvarlaklığı */
+    padding: 2rem;
+    /* İç boşluk */
+    backdrop-filter: blur(15px);
+    /* Bulanık arka plan efekti */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* İnce beyaz çerçeve */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+    text-align: center;
+    /* Metni ortala */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
 }
 
 /* İletişim kartı hover */
 .iletisim-kart:hover {
-    transform: translateY(-10px); /* Yukarı hareket */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Daha güçlü gölge */
-    background: rgba(255, 255, 255, 0.15); /* Daha belirgin arka plan */
+    transform: translateY(-10px);
+    /* Yukarı hareket */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Daha güçlü gölge */
+    background: rgba(255, 255, 255, 0.15);
+    /* Daha belirgin arka plan */
 }
 
 /* İletişim ikonu */
 .iletisim-icon {
-    font-size: 3rem; /* Büyük ikon */
-    margin-bottom: 1rem; /* Alt boşluk */
-    display: block; /* Blok element */
+    font-size: 3rem;
+    /* Büyük ikon */
+    margin-bottom: 1rem;
+    /* Alt boşluk */
+    display: block;
+    /* Blok element */
 }
 
 /* İletişim kart başlığı */
 .iletisim-kart h3 {
-    color: #fff; /* Beyaz renk */
-    font-size: 1.5rem; /* Font boyutu */
-    font-weight: bold; /* Kalın font */
-    margin-bottom: 1rem; /* Alt boşluk */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Gölge efekti */
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1.5rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    margin-bottom: 1rem;
+    /* Alt boşluk */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
 }
 
 /* İletişim kart paragrafı */
 .iletisim-kart p {
-    color: #fff; /* Beyaz renk */
-    font-size: 1.1rem; /* Font boyutu */
-    opacity: 0.9; /* Hafif şeffaflık */
-    margin: 0; /* Dış boşluk yok */
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1.1rem;
+    /* Font boyutu */
+    opacity: 0.9;
+    /* Hafif şeffaflık */
+    margin: 0;
+    /* Dış boşluk yok */
 }
 
 /* İletişim form container */
 .iletisim-form {
-    background: rgba(255, 255, 255, 0.1); /* Yarı şeffaf beyaz arka plan */
-    border-radius: 20px; /* Köşe yuvarlaklığı */
-    padding: 3rem; /* İç boşluk */
-    backdrop-filter: blur(15px); /* Bulanık arka plan efekti */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* İnce beyaz çerçeve */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-    max-width: 600px; /* Maksimum genişlik */
-    width: 100%; /* Tam genişlik */
-    animation: fadeInUp 1s ease-out 0.4s both; /* Aşağıdan yukarı animasyon */
-    z-index: 2; /* Katman sırası */
-    position: relative; /* Pozisyon referansı */
-    transition: all 0.3s ease; /* Geçiş animasyonu */
+    background: rgba(255, 255, 255, 0.1);
+    /* Yarı şeffaf beyaz arka plan */
+    border-radius: 20px;
+    /* Köşe yuvarlaklığı */
+    padding: 3rem;
+    /* İç boşluk */
+    backdrop-filter: blur(15px);
+    /* Bulanık arka plan efekti */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* İnce beyaz çerçeve */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+    max-width: 600px;
+    /* Maksimum genişlik */
+    width: 100%;
+    /* Tam genişlik */
+    animation: fadeInUp 1s ease-out 0.4s both;
+    /* Aşağıdan yukarı animasyon */
+    z-index: 2;
+    /* Katman sırası */
+    position: relative;
+    /* Pozisyon referansı */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
 }
 
 /* İletişim form hover */
 .iletisim-form:hover {
-    transform: translateY(-5px); /* Yukarı hareket */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Daha güçlü gölge */
-    background: rgba(255, 255, 255, 0.15); /* Daha belirgin arka plan */
+    transform: translateY(-5px);
+    /* Yukarı hareket */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Daha güçlü gölge */
+    background: rgba(255, 255, 255, 0.15);
+    /* Daha belirgin arka plan */
 }
 
 /* Form başlığı */
 .form-baslik {
-    color: #fff; /* Beyaz renk */
-    font-size: 2rem; /* Font boyutu */
-    font-weight: bold; /* Kalın font */
-    text-align: center; /* Metni ortala */
-    margin-bottom: 2rem; /* Alt boşluk */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Gölge efekti */
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 2rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    text-align: center;
+    /* Metni ortala */
+    margin-bottom: 2rem;
+    /* Alt boşluk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Gölge efekti */
 }
 
 /* Form */
 .iletisim-form form {
-    display: flex; /* Flexbox düzeni */
-    flex-direction: column; /* Dikey sıralama */
-    gap: 1.5rem; /* Form öğeleri arası boşluk */
+    display: flex;
+    /* Flexbox düzeni */
+    flex-direction: column;
+    /* Dikey sıralama */
+    gap: 1.5rem;
+    /* Form öğeleri arası boşluk */
 }
 
 /* Form grup */
 .form-grup {
-    position: relative; /* Pozisyon referansı */
+    position: relative;
+    /* Pozisyon referansı */
 }
 
 /* Form input */
 .iletisim-form input,
 .iletisim-form textarea {
-    width: 100%; /* Tam genişlik */
-    padding: 1rem; /* İç boşluk */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* İnce beyaz çerçeve */
-    border-radius: 10px; /* Köşe yuvarlaklığı */
-    background: rgba(255, 255, 255, 0.1); /* Yarı şeffaf arka plan */
-    color: #fff; /* Beyaz renk */
-    font-size: 1rem; /* Font boyutu */
-    transition: all 0.3s ease; /* Geçiş animasyonu */
-    backdrop-filter: blur(10px); /* Bulanık arka plan */
+    width: 100%;
+    /* Tam genişlik */
+    padding: 1rem;
+    /* İç boşluk */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* İnce beyaz çerçeve */
+    border-radius: 10px;
+    /* Köşe yuvarlaklığı */
+    background: rgba(255, 255, 255, 0.1);
+    /* Yarı şeffaf arka plan */
+    color: #fff;
+    /* Beyaz renk */
+    font-size: 1rem;
+    /* Font boyutu */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    backdrop-filter: blur(10px);
+    /* Bulanık arka plan */
 }
 
 /* Form input placeholder */
 .iletisim-form input::placeholder,
 .iletisim-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Yarı şeffaf beyaz */
+    color: rgba(255, 255, 255, 0.7);
+    /* Yarı şeffaf beyaz */
 }
 
 /* Form input focus */
 .iletisim-form input:focus,
 .iletisim-form textarea:focus {
-    outline: none; /* Dış çizgi yok */
-    border-color: #ff6b6b; /* Kırmızı çerçeve */
-    background: rgba(255, 255, 255, 0.15); /* Daha belirgin arka plan */
-    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3); /* Gölge efekti */
+    outline: none;
+    /* Dış çizgi yok */
+    border-color: #ff6b6b;
+    /* Kırmızı çerçeve */
+    background: rgba(255, 255, 255, 0.15);
+    /* Daha belirgin arka plan */
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+    /* Gölge efekti */
 }
 
 /* Form textarea */
 .iletisim-form textarea {
-    resize: vertical; /* Sadece dikey boyutlandırma */
-    min-height: 120px; /* Minimum yükseklik */
+    resize: vertical;
+    /* Sadece dikey boyutlandırma */
+    min-height: 120px;
+    /* Minimum yükseklik */
 }
 
 /* Gönder butonu */
 .gonder-btn {
-    background: linear-gradient(45deg, #ff6b6b, #ee5a24); /* Gradient arka plan */
-    color: #fff; /* Beyaz renk */
-    border: none; /* Kenarlık yok */
-    padding: 1rem 2rem; /* İç boşluk */
-    border-radius: 50px; /* Yuvarlak köşeler */
-    font-size: 1.2rem; /* Font boyutu */
-    font-weight: bold; /* Kalın font */
-    cursor: pointer; /* El işaretçisi */
-    transition: all 0.3s ease; /* Geçiş animasyonu */
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3); /* Gölge efekti */
-    display: flex; /* Flexbox düzeni */
-    align-items: center; /* Dikeyde ortala */
-    justify-content: center; /* Yatayda ortala */
-    gap: 0.5rem; /* İkon ve metin arası boşluk */
-    margin-top: 1rem; /* Üst boşluk */
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    /* Gradient arka plan */
+    color: #fff;
+    /* Beyaz renk */
+    border: none;
+    /* Kenarlık yok */
+    padding: 1rem 2rem;
+    /* İç boşluk */
+    border-radius: 50px;
+    /* Yuvarlak köşeler */
+    font-size: 1.2rem;
+    /* Font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    cursor: pointer;
+    /* El işaretçisi */
+    transition: all 0.3s ease;
+    /* Geçiş animasyonu */
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+    /* Gölge efekti */
+    display: flex;
+    /* Flexbox düzeni */
+    align-items: center;
+    /* Dikeyde ortala */
+    justify-content: center;
+    /* Yatayda ortala */
+    gap: 0.5rem;
+    /* İkon ve metin arası boşluk */
+    margin-top: 1rem;
+    /* Üst boşluk */
 }
 
 /* Gönder butonu hover */
 .gonder-btn:hover {
-    transform: translateY(-3px); /* Yukarı hareket */
-    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4); /* Daha güçlü gölge */
-    background: linear-gradient(45deg, #ee5a24, #ff6b6b); /* Ters gradient */
+    transform: translateY(-3px);
+    /* Yukarı hareket */
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+    /* Daha güçlü gölge */
+    background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+    /* Ters gradient */
 }
 
 /* Buton ikonu */
 .btn-icon {
-    font-size: 1.5rem; /* İkon boyutu */
+    font-size: 1.5rem;
+    /* İkon boyutu */
 }
 
 /* Buton metni */
 .btn-text {
-    font-weight: 600; /* Orta kalınlık */
+    font-weight: 600;
+    /* Orta kalınlık */
 }
 
 /* Arka plan dekoratif elementler */
 .iletisim::before {
-    content: ''; /* İçerik yok */
-    position: absolute; /* Mutlak pozisyon */
-    top: -50%; /* Üstten yarı yükseklik */
-    left: -50%; /* Soldan yarı genişlik */
-    width: 200%; /* İki kat genişlik */
-    height: 200%; /* İki kat yükseklik */
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); /* Radyal gradient */
-    animation: rotate 25s linear infinite; /* Döndürme animasyonu */
-    z-index: 1; /* Arka plan katmanı */
+    content: '';
+    /* İçerik yok */
+    position: absolute;
+    /* Mutlak pozisyon */
+    top: -50%;
+    /* Üstten yarı yükseklik */
+    left: -50%;
+    /* Soldan yarı genişlik */
+    width: 200%;
+    /* İki kat genişlik */
+    height: 200%;
+    /* İki kat yükseklik */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    /* Radyal gradient */
+    animation: rotate 25s linear infinite;
+    /* Döndürme animasyonu */
+    z-index: 1;
+    /* Arka plan katmanı */
 }
 
 /* Yukarıdan aşağı fade animasyonu */
 @keyframes fadeInDown {
     from {
-        opacity: 0; /* Başlangıçta görünmez */
-        transform: translateY(-50px); /* Yukarıdan başla */
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(-50px);
+        /* Yukarıdan başla */
     }
+
     to {
-        opacity: 1; /* Sonunda görünür */
-        transform: translateY(0); /* Normal pozisyon */
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
     }
 }
 
 /* Aşağıdan yukarı fade animasyonu */
 @keyframes fadeInUp {
     from {
-        opacity: 0; /* Başlangıçta görünmez */
-        transform: translateY(50px); /* Aşağıdan başla */
+        opacity: 0;
+        /* Başlangıçta görünmez */
+        transform: translateY(50px);
+        /* Aşağıdan başla */
     }
+
     to {
-        opacity: 1; /* Sonunda görünür */
-        transform: translateY(0); /* Normal pozisyon */
+        opacity: 1;
+        /* Sonunda görünür */
+        transform: translateY(0);
+        /* Normal pozisyon */
     }
 }
 
 /* Arka plan döndürme animasyonu */
 @keyframes rotate {
     from {
-        transform: rotate(0deg); /* Başlangıç açısı */
+        transform: rotate(0deg);
+        /* Başlangıç açısı */
     }
+
     to {
-        transform: rotate(360deg); /* Tam dönüş */
+        transform: rotate(360deg);
+        /* Tam dönüş */
     }
 }
 
 /* Tablet boyutu için responsive tasarım */
 @media (max-width: 768px) {
     .iletisim {
-        padding: 1.5rem; /* Daha az padding */
-        gap: 2rem; /* Daha az boşluk */
+        padding: 1.5rem;
+        /* Daha az padding */
+        gap: 2rem;
+        /* Daha az boşluk */
     }
-    
+
     .iletisim-baslik {
-        font-size: 2.5rem; /* Daha küçük başlık */
+        font-size: 2.5rem;
+        /* Daha küçük başlık */
     }
-    
+
     .iletisim-bilgiler {
-        gap: 1.5rem; /* Daha az boşluk */
-        max-width: 600px; /* Daha az maksimum genişlik */
+        gap: 1.5rem;
+        /* Daha az boşluk */
+        max-width: 600px;
+        /* Daha az maksimum genişlik */
     }
-    
+
     .iletisim-kart {
-        padding: 1.5rem; /* Daha az iç boşluk */
+        padding: 1.5rem;
+        /* Daha az iç boşluk */
     }
-    
+
     .iletisim-icon {
-        font-size: 2.5rem; /* Daha küçük ikon */
+        font-size: 2.5rem;
+        /* Daha küçük ikon */
     }
-    
+
     .iletisim-form {
-        padding: 2rem; /* Daha az iç boşluk */
-        max-width: 500px; /* Daha az maksimum genişlik */
+        padding: 2rem;
+        /* Daha az iç boşluk */
+        max-width: 500px;
+        /* Daha az maksimum genişlik */
     }
-    
+
     .form-baslik {
-        font-size: 1.8rem; /* Daha küçük başlık */
+        font-size: 1.8rem;
+        /* Daha küçük başlık */
     }
-    
+
     .gonder-btn {
-        padding: 0.8rem 1.5rem; /* Daha az padding */
-        font-size: 1rem; /* Daha küçük font */
+        padding: 0.8rem 1.5rem;
+        /* Daha az padding */
+        font-size: 1rem;
+        /* Daha küçük font */
     }
 }
 
 /* Mobil boyut için responsive tasarım */
 @media (max-width: 480px) {
     .iletisim {
-        padding: 1rem; /* En az padding */
-        gap: 1.5rem; /* En az boşluk */
+        padding: 1rem;
+        /* En az padding */
+        gap: 1.5rem;
+        /* En az boşluk */
     }
-    
+
     .iletisim-baslik {
-        font-size: 2rem; /* En küçük başlık */
+        font-size: 2rem;
+        /* En küçük başlık */
     }
-    
+
     .iletisim-bilgiler {
-        grid-template-columns: 1fr; /* Tek sütun */
-        gap: 1rem; /* En az boşluk */
-        max-width: 400px; /* En az maksimum genişlik */
+        grid-template-columns: 1fr;
+        /* Tek sütun */
+        gap: 1rem;
+        /* En az boşluk */
+        max-width: 400px;
+        /* En az maksimum genişlik */
     }
-    
+
     .iletisim-kart {
-        padding: 1rem; /* En az iç boşluk */
+        padding: 1rem;
+        /* En az iç boşluk */
     }
-    
+
     .iletisim-icon {
-        font-size: 2rem; /* En küçük ikon */
+        font-size: 2rem;
+        /* En küçük ikon */
     }
-    
+
     .iletisim-kart h3 {
-        font-size: 1.3rem; /* Daha küçük başlık */
+        font-size: 1.3rem;
+        /* Daha küçük başlık */
     }
-    
+
     .iletisim-kart p {
-        font-size: 1rem; /* Daha küçük paragraf */
+        font-size: 1rem;
+        /* Daha küçük paragraf */
     }
-    
+
     .iletisim-form {
-        padding: 1.5rem; /* En az iç boşluk */
-        max-width: 400px; /* En az maksimum genişlik */
+        padding: 1.5rem;
+        /* En az iç boşluk */
+        max-width: 400px;
+        /* En az maksimum genişlik */
     }
-    
+
     .form-baslik {
-        font-size: 1.5rem; /* En küçük başlık */
+        font-size: 1.5rem;
+        /* En küçük başlık */
     }
-    
+
     .iletisim-form input,
     .iletisim-form textarea {
-        padding: 0.8rem; /* Daha az padding */
-        font-size: 0.9rem; /* Daha küçük font */
+        padding: 0.8rem;
+        /* Daha az padding */
+        font-size: 0.9rem;
+        /* Daha küçük font */
     }
-    
+
     .gonder-btn {
-        padding: 0.6rem 1.2rem; /* En az padding */
-        font-size: 0.9rem; /* En küçük font */
+        padding: 0.6rem 1.2rem;
+        /* En az padding */
+        font-size: 0.9rem;
+        /* En küçük font */
     }
 }

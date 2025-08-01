@@ -1,118 +1,174 @@
 /* Navbar container - Ana kapsayıcı div */
 .navbar-container {
-    width: 100%; /* Tam genişlik */
+    width: 100%;
+    /* Tam genişlik */
 }
 
 /* Ana navbar bileşeni */
 .navbar {
-    top: 0; /* Üstten sıfır mesafe */
-    left: 0; /* Soldan sıfır mesafe */
-    width: 100%; /* Tam genişlik */
-    background-color: #2c3e50; /* Koyu mavi-gri arka plan */
-    color: #fff; /* Beyaz metin rengi */
-    padding: 0 3rem; /* Üst-alt 0, sağ-sol 3rem boşluk */
-    display: flex; /* Flexbox düzeni */
-    justify-content: center; /* Yatayda ortala */
-    align-items: center; /* Dikeyde ortala */
-    position: fixed; /* Sabit pozisyon (sayfa kaydırılırken üstte kalır) */
-    z-index: 100; /* Katman sırası (diğer elementlerin üstünde) */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Gölge efekti */
-    height: 70px; /* Sabit yükseklik */
-    gap: 3rem; /* Logo ile menü arası boşluk */
+    top: 0;
+    /* Üstten sıfır mesafe */
+    left: 0;
+    /* Soldan sıfır mesafe */
+    width: 100%;
+    /* Tam genişlik */
+    background-color: #2c3e50;
+    /* Koyu mavi-gri arka plan */
+    color: #fff;
+    /* Beyaz metin rengi */
+    padding: 0 3rem;
+    /* Üst-alt 0, sağ-sol 3rem boşluk */
+    display: flex;
+    /* Flexbox düzeni */
+    justify-content: center;
+    /* Yatayda ortala */
+    align-items: center;
+    /* Dikeyde ortala */
+    position: fixed;
+    /* Sabit pozisyon (sayfa kaydırılırken üstte kalır) */
+    z-index: 100;
+    /* Katman sırası (diğer elementlerin üstünde) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+    height: 70px;
+    /* Sabit yükseklik */
+    gap: 3rem;
+    /* Logo ile menü arası boşluk */
 }
 
 /* Logo linki stilleri */
 .nav-logo a {
-    color: #fff; /* Beyaz renk */
-    text-decoration: none; /* Alt çizgi yok */
-    font-size: 3rem; /* Büyük font boyutu */
-    font-weight: bold; /* Kalın font */
-    transition: color 0.3s ease; /* Renk geçiş animasyonu */
-    min-width: 100px; /* Minimum genişlik */
+    color: #fff;
+    /* Beyaz renk */
+    text-decoration: none;
+    /* Alt çizgi yok */
+    font-size: 3rem;
+    /* Büyük font boyutu */
+    font-weight: bold;
+    /* Kalın font */
+    transition: color 0.3s ease;
+    /* Renk geçiş animasyonu */
+    min-width: 100px;
+    /* Minimum genişlik */
     padding: 0 7rem;
 }
 
 /* Logo hover efekti */
 .nav-logo a:hover {
-    color: #3498db; /* Hover'da mavi renk */
+    color: #3498db;
+    /* Hover'da mavi renk */
 }
 
 /* Menü listesi container */
 .nav-menu {
-    display: flex; /* Flexbox düzeni */
-    list-style: none; /* Liste noktaları yok */
-    margin: 0; /* Dış boşluk yok */
-    padding: 0; /* İç boşluk yok */
-    gap: 0.8rem; /* Menü öğeleri arası boşluk */
-    flex-wrap: wrap; /* Gerekirse alt satıra geç */
+    display: flex;
+    /* Flexbox düzeni */
+    list-style: none;
+    /* Liste noktaları yok */
+    margin: 0;
+    /* Dış boşluk yok */
+    padding: 0;
+    /* İç boşluk yok */
+    gap: 0.8rem;
+    /* Menü öğeleri arası boşluk */
+    flex-wrap: wrap;
+    /* Gerekirse alt satıra geç */
 }
 
 /* Menü öğesi */
 .nav-item {
-    margin: 0; /* Dış boşluk yok */
+    margin: 0;
+    /* Dış boşluk yok */
 }
 
 /* Menü linki stilleri */
 .nav-link {
-    color: #fff; /* Beyaz renk */
-    text-decoration: none; /* Alt çizgi yok */
-    padding: 0.5rem 0.5rem; /* İç boşluk */
-    border-radius: 4px; /* Köşe yuvarlaklığı */
-    transition: all 0.3s ease; /* Tüm geçiş animasyonları */
-    font-weight: 500; /* Orta kalınlık font */
-    white-space: nowrap; /* Metin bölünmesin */
-    font-size: 0.9rem; /* Font boyutu */
+    color: #fff;
+    /* Beyaz renk */
+    text-decoration: none;
+    /* Alt çizgi yok */
+    padding: 0.5rem 0.5rem;
+    /* İç boşluk */
+    border-radius: 4px;
+    /* Köşe yuvarlaklığı */
+    transition: all 0.3s ease;
+    /* Tüm geçiş animasyonları */
+    font-weight: 500;
+    /* Orta kalınlık font */
+    white-space: nowrap;
+    /* Metin bölünmesin */
+    font-size: 0.9rem;
+    /* Font boyutu */
 }
 
 /* Menü linki hover efekti */
 .nav-link:hover {
-    background-color: #3498db; /* Hover'da mavi arka plan */
-    color: #fff; /* Beyaz metin */
-    transform: translateY(-2px); /* Yukarı hareket efekti */
+    background-color: #3498db;
+    /* Hover'da mavi arka plan */
+    color: #fff;
+    /* Beyaz metin */
+    transform: translateY(-2px);
+    /* Yukarı hareket efekti */
 }
 
 /* Tablet boyutu için responsive tasarım */
 @media (max-width: 768px) {
     .navbar {
-        padding: 0 2rem; /* Daha az kenar boşluğu */
-        gap: 2rem; /* Daha az gap */
+        padding: 0 2rem;
+        /* Daha az kenar boşluğu */
+        gap: 2rem;
+        /* Daha az gap */
     }
-    
+
     .nav-menu {
-        gap: 0.6rem; /* Daha az menü öğesi arası boşluk */
+        gap: 0.6rem;
+        /* Daha az menü öğesi arası boşluk */
     }
-    
+
     .nav-link {
-        padding: 0.3rem 0.3rem; /* Daha az iç boşluk */
-        font-size: 0.8rem; /* Daha küçük font */
+        padding: 0.3rem 0.3rem;
+        /* Daha az iç boşluk */
+        font-size: 0.8rem;
+        /* Daha küçük font */
     }
-    
+
     .nav-logo a {
-        font-size: 2rem; /* Daha küçük logo fontu */
-        min-width: 80px; /* Daha az minimum genişlik */
-        padding: 0 3rem; /* Daha az padding */
+        font-size: 2rem;
+        /* Daha küçük logo fontu */
+        min-width: 80px;
+        /* Daha az minimum genişlik */
+        padding: 0 3rem;
+        /* Daha az padding */
     }
 }
 
 /* Mobil boyut için responsive tasarım */
 @media (max-width: 480px) {
     .navbar {
-        padding: 0 1.5rem; /* En az kenar boşluğu */
-        gap: 1.5rem; /* En az gap */
+        padding: 0 1.5rem;
+        /* En az kenar boşluğu */
+        gap: 1.5rem;
+        /* En az gap */
     }
-    
+
     .nav-menu {
-        gap: 0.4rem; /* En az menü öğesi arası boşluk */
+        gap: 0.4rem;
+        /* En az menü öğesi arası boşluk */
     }
-    
+
     .nav-link {
-        padding: 0.2rem 0.2rem; /* En az iç boşluk */
-        font-size: 0.75rem; /* En küçük font */
+        padding: 0.2rem 0.2rem;
+        /* En az iç boşluk */
+        font-size: 0.75rem;
+        /* En küçük font */
     }
-    
+
     .nav-logo a {
-        font-size: 1.5rem; /* En küçük logo fontu */
-        min-width: 60px; /* En az minimum genişlik */
-        padding: 0 1.5rem; /* En az padding */
+        font-size: 1.5rem;
+        /* En küçük logo fontu */
+        min-width: 60px;
+        /* En az minimum genişlik */
+        padding: 0 1.5rem;
+        /* En az padding */
     }
 }
